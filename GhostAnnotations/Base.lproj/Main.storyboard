@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7JL-kQ-lQU">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Demo-->
+        <scene sceneID="8qa-rJ-v8v">
+            <objects>
+                <viewController storyboardIdentifier="MapViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="3TW-1c-oFj" customClass="MapViewController" customModule="GhostAnnotations" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dZE-aJ-7ou">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="sfn-dt-h2X">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                            </mapView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="7g5-Y4-deq"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="sfn-dt-h2X" firstAttribute="leading" secondItem="7g5-Y4-deq" secondAttribute="leading" id="0Qs-oe-NuM"/>
+                            <constraint firstItem="sfn-dt-h2X" firstAttribute="top" secondItem="7g5-Y4-deq" secondAttribute="top" id="OCr-Pv-Txy"/>
+                            <constraint firstItem="7g5-Y4-deq" firstAttribute="bottom" secondItem="sfn-dt-h2X" secondAttribute="bottom" id="a43-xM-9A2"/>
+                            <constraint firstItem="7g5-Y4-deq" firstAttribute="trailing" secondItem="sfn-dt-h2X" secondAttribute="trailing" id="sx6-ZU-hWc"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems>
+                        <barButtonItem title="Purple" id="or1-qZ-thj">
+                            <connections>
+                                <action selector="showPurple:" destination="3TW-1c-oFj" id="XSH-Ds-SGX"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem title="Orange" id="OBy-3n-ip6">
+                            <connections>
+                                <action selector="showOrange:" destination="3TW-1c-oFj" id="6U9-9W-quF"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem title="Image" id="x5q-2U-Qks">
+                            <connections>
+                                <action selector="showImage:" destination="3TW-1c-oFj" id="sGs-1Z-zHi"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="UyD-WD-LDO"/>
+                        <barButtonItem title="Toggle All" id="jbq-cw-eDV">
+                            <connections>
+                                <action selector="toggleAll:" destination="3TW-1c-oFj" id="SoK-Yw-l9P"/>
+                            </connections>
+                        </barButtonItem>
+                    </toolbarItems>
+                    <navigationItem key="navigationItem" title="Demo" id="I49-t4-SZ6"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="mapView" destination="sfn-dt-h2X" id="RKw-5v-d7N"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TNY-Tw-cZO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="550.72463768115949" y="415.84821428571428"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="5wa-uG-sTW">
+            <objects>
+                <navigationController toolbarHidden="NO" id="7JL-kQ-lQU" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ydR-yq-lox">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Nlr-if-Yzo">
+                        <rect key="frame" x="0.0" y="813" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
+                    <connections>
+                        <segue destination="3TW-1c-oFj" kind="relationship" relationship="rootViewController" id="kOX-Vx-QIe"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="atA-z1-BkZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-252" y="416"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
